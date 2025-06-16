@@ -1,0 +1,14 @@
+{
+  "name": "sbs-seo-backlinks-submitter",
+  "version": "1.0.0",
+  "description": "Tools SEO untuk kirim backlink otomatis",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "inquirer": "^9.0.0"
+  }
+}
