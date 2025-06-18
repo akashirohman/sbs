@@ -1,2 +1,2 @@
-Artikel ini menarik! Saya juga membahas topik ini di <a href='{url}'>{anchor}</a>.
-Saya merekomendasikan bacaan ini dan juga <a href='{url}'>{anchor}</a> sebagai referensi tambahan.
+Artikel menarik! Saya juga membahas ini di <a href="{url}">{anchor}</a>.
+Terima kasih infonya, cek juga tulisan saya tentang <a href="{url}">{anchor}</a>.
