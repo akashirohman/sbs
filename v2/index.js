@@ -25,7 +25,7 @@ async function main() {
   const stats = Array.from({ length: threadCount }, () => ({ sent: 0, success: 0, failed: 0 }));
 
   for (let i = 0; i < threadCount; i++) {
-    handleThread(i, blogs, targetUrl, anchorText, stats[i]);
+    handleThread(i, blogs, targetUrl, anchorText, stats[i], threadCount);
   }
 
   setInterval(() => {
@@ -46,17 +46,17 @@ async function main() {
   });
 }
 
-function handleThread(index, blogs, targetUrl, anchorText, stat) {
+function handleThread(index, blogs, targetUrl, anchorText, stat, totalThreads) {
   let current = index;
   (async function loop() {
     while (current < blogs.length) {
       const blogUrl = blogs[current];
       try {
         await postComment(blogUrl, targetUrl, anchorText, stat);
-      } catch (e) {
+      } catch {
         stat.failed++;
       }
-      current += stat.threadJump || 1;
+      current += totalThreads;
     }
   })();
 }
